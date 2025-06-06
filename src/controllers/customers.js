@@ -1,7 +1,7 @@
 const CustomersModel = require('../models/customers')
 const { crypto } = require('../utils/password')
 
-const defaultTitle = 'Formulario'
+const defaultTitle = 'Cadastrar Usuário'
 
 async function add (req, res) {
     const {

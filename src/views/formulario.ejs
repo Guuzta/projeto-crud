@@ -1,42 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <%- include('partials/head.ejs')%>
+    <%- include('partials/head.ejs')%>
 </head>
+
 <body>
-    
-    <h1><%= title%> </h1>
 
     <%- include('partials/navbar.ejs')%>
 
-    <form action="/formulario/add" method="POST">
-        <div>
-            <label for="">Nome:</label>
-            <input name="name" type="text">
-        </div>
-        <br>
-        <div>
-            <label for="">Idade:</label>
-            <input name="age" type="number">
-        </div>
-        <br>
-        <div>
-            <label for="">Email:</label>
-            <input name="email" type="email">
-        </div>
-        <br>
-        <div>
-            <label for="">Senha:</label>
-            <input name="password" type="password">
-        </div>
-        <br>
-        <button type="submit">Cadastrar</button>
-    </form>
+        <form class="registrationForm" action="/formulario/add" method="POST">
+            <div class="formContent">
+                <h2>Formulário</h2>
+                <br>
+                <div>
+                    <label for="">Nome</label>
+                    <input name="name" type="text">
+                </div>
+                <br>
+                <div>
+                    <label for="">Idade</label>
+                    <input name="age" type="number">
+                </div>
+                <br>
+                <div>
+                    <label for="">Email</label>
+                    <input name="email" type="email">
+                </div>
+                <br>
+                <div>
+                    <label for="">Senha</label>
+                    <input name="password" type="password">
+                </div>
+                <br>
+                <button type="submit">Cadastrar</button>
 
-    <% if(typeof message !== 'undefined') { %>
-        <span><%= message%></span>
-    <% } %>
+                <% if(typeof message !=='undefined' ) { %>
+                    <span>
+                        <%= message%>
+                    </span>
+                <% } %>
+            </div>
 
-    <%- include('partials/foot.ejs')%>
+        </form>
+
+
+
+        <%- include('partials/foot.ejs')%>
 </body>
+
 </html>
