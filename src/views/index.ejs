@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <%- include('partials/head.ejs')%>
 </head>
-<body>
-    
-    <h1><%= title%> </h1>
 
-    <%- include('partials/navbar.ejs')%>
-    
-    <%- include('partials/foot.ejs')%>
+<body>
+
+  <%- include('partials/navbar.ejs')%>
+
+  <main>
+    <section class="homeContent">
+      <h2>Crie, atualize, liste e delete usuários: seu conteúdo do seu jeito!</h2>
+      <p>
+        Com apenas alguns cliques, você pode criar novos cadastros, atualizar informações, listar todos os usuários e
+        deletar registros quando necessário.
+      </p>
+    </section>
+  </main>
+
+  <%- include('partials/foot.ejs')%>
 </body>
+
 </html>
