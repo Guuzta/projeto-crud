@@ -160,12 +160,12 @@ body {
             border: 2px solid $text-color;
             width: 80%;
 
-           div {
+            div {
                 width: 30%;
                 text-align: center;
-           }
+            }
 
-           .links {
+            .links {
 
                 a {
                     color: $text-color;
@@ -179,10 +179,77 @@ body {
                     color: #ff0000;
                 }
 
-           }
+            }
 
         }
     }
 
 
+    .editingForm {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        color: $text-color;
+
+        .formContent {
+            width: 30%;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 5px;
+
+            h2 {
+                font-size: 30px;
+            }
+
+
+            label {
+                margin-bottom: 10px;
+                display: block;
+                font-style: italic;
+            }
+
+            input {
+                outline: none;
+                width: 100%;
+                padding: 10px;
+
+                &[type="number"]::-webkit-inner-spin-button,
+                &[type="number"]::-webkit-outer-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+            }
+
+
+
+            button {
+                width: 100%;
+                padding: 15px;
+                margin-top: 30px;
+                background-color: $primary-color;
+                border: none;
+                color: white;
+                font-weight: bold;
+                font-size: 20px;
+                cursor: pointer;
+                transition: 300ms all ease;
+
+                &:hover {
+                    background-color: $secondary-color;
+                }
+            }
+
+            span {
+                margin-top: 20px;
+                display: block;
+                color: #08a508;
+                font-weight: bold;
+                text-align: center;
+            }
+        }
+
+    }
 }
