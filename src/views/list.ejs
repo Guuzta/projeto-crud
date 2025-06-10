@@ -1,26 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <%- include('partials/head.ejs')%>
 </head>
+
 <body>
-    
-    <h1><%= title%> </h1>
+
+  <%- include('partials/navbar.ejs')%>
 
 
-    <%- include('partials/navbar.ejs')%>
 
-    <ul>
-      <% users.forEach(user => { %>
-          <li>
-            <%= user.name%> - <%=`${user.age} anos`%> - 
-            <%= user.email%>  - 
-            <a href="/edit?id=<%=user._id%>">[editar]</a> - 
-            <a href="/remove/<%=user._id%>">[remover]</a>
-          </li>
-      <% }); %> 
-    </ul> 
+    <ul class="usersList">
+      <% users.forEach(user=> { %>
+        <li class="user">
+
+          <div class="name">
+            <%= user.name%>
+          </div>
+
+          <div>
+            <%= user.age%> anos
+          </div>
+
+          <div>
+            <%= user.email%>
+          </div>
+
+          <div class="links">
+            <a class="edit" href="/edit?id=<%=user._id%>">[editar]</a> -
+            <a class="remove" href="/remove/<%=user._id%>">[remover]</a>
+          </div>
+        </li>
+        <% }); %>
+    </ul>
+
+
+
+
+
 
     <%- include('partials/foot.ejs')%>
 </body>
+
 </html>

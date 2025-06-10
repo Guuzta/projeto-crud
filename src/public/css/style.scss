@@ -137,4 +137,52 @@ body {
 
 
     }
+
+    .usersList {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: $text-color;
+        margin-top: 50px;
+
+
+        .user {
+
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            justify-content: space-around;
+            background-color: #ffffff;
+            border: 2px solid $text-color;
+            width: 80%;
+
+           div {
+                width: 30%;
+                text-align: center;
+           }
+
+           .links {
+
+                a {
+                    color: $text-color;
+                }
+
+                .edit {
+                    color: #08a508;
+                }
+
+                .remove {
+                    color: #ff0000;
+                }
+
+           }
+
+        }
+    }
+
+
 }
